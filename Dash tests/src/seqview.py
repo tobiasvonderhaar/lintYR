@@ -1,5 +1,5 @@
 def basicView(seq):
-    from utils import find_orf,translate
+    from src.utils import find_orf,translate
     import matplotlib.pyplot as plt
     
     #break seq into 60 nt lines
