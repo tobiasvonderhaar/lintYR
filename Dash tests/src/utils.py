@@ -175,7 +175,10 @@ def translate(dnaSeq,genCode=1):
     str
         The amino acid sequence translated from seq.
     '''
-    from src.utils import makeCodedict
+    try:
+        from src.utils import makeCodedict
+    except:
+        from utils import makeCodedict
     codedict = makeCodedict(genCode=genCode)
     dnaSeq = dnaSeq.replace('U','T').upper()
     codonSeq = [dnaSeq[n:n+3] for n in range(0,len(dnaSeq),3)]
